@@ -19,6 +19,7 @@ ensure that minimum order amounts are met. The participants in the group-order c
 bill, to the coordinator via [venmo](https://venmo.com/). It's akin to paying cash to the person who pays
 for an entire dinner to avoid splitting credit cards. My app is called [scrumdiddlyumptious](https://github.com/rcarino/scrumdiddlyumptious).
 It uses:
+
 1. The [ordr.in api](http://ordr.in/) to search for restaurants and menus and handle orders.
 2. Venmo to handle cash transfers between friends
 3. [Twilio](https://www.twilio.com/) to handle order confirmation text messages.
@@ -35,6 +36,7 @@ I learned this the hard way. I ran through the android tutorial and all of the c
 first CBS Interactive hackathon, and I utterly failed.
 
 My other protip is fake it until you make it. I mocked and pissed on the gods of good code:
+
 1. I copied and pasted, blog and stack overflow code raw
 2. I faked data
 3. I broke every good style guideline known to man.
@@ -58,8 +60,9 @@ later if time permits. Unfortunately, that slimy piece of sewer sludge in the co
 Another technique that helped me during this hackathon was planning deliverables. I used [fogbugz](http://www.fogcreek.com/Fogbugz/)
 as a task manager, creating concrete cases. It's free to use for up to 2 individuals. Some of you are going to hate me
 for tooting my horn, but having a vision of what I needed to deliver and their delivery times gave me the spare time to go on a dinner date
-in the middle of the hackathon. Like a boss. Other groups slaved away. They also possibly suffered from diminishing returns due to fatigue,
-while I returned to the hackathon refreshed.
+in the middle of the hackathon. Like a boss. I could have slaved away the entire day, but it's a good thing I didn't. I was
+able to easily solve problems that I was banging my head against before having a nice dinner, or a good night's sleep. They
+were dumb problems like typos in urls.
 
 One thing I direly need to improve on is salesmanship. I had purchased the scrum.diddlyumpti.us domain, yet it didn't occur
 to me that I could have let the hackathon judges use the product and contribute to a group order with me. It's so obvious
