@@ -15,7 +15,7 @@ I want to understand the [Paxos algorithm](http://en.wikipedia.org/wiki/Paxos_(c
 I don't think I could write much about those endeavors.
 
 Since I have nothing to write about now, I'll write about a past fantasy basketball side project.
-Here's the code: [](https://github.com/rcarino/massive-random-programming/tree/master/Fun/FantasyBasketball).
+Here's the code: [https://github.com/rcarino/massive-random-programming/tree/master/Fun/FantasyBasketball](https://github.com/rcarino/massive-random-programming/tree/master/Fun/FantasyBasketball).
 I was tired of setting my rosters manually, so I wrote javascript bookmarklets to automatically set my rosters.
 
 I wrote 2 bookmarklets. 1 for yahoo, and 1 for espn.
