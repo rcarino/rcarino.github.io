@@ -41,7 +41,7 @@ Here is an unordered list of my favorite lunch spots around work.
     + **+** Good ole' chipotle needs no description
     + **+** Get away with not paying for double meat a good amount during lunch rush-hour.
 
-I hope you enjoyed reading finding out what sustains me. Surprisingly I'm not obese yet. 200lbs @ 5'11" at the time
+I hope you enjoyed finding out about what sustains me. Surprisingly I'm not obese yet. 200lbs @ 5'11" at the time
 of writing (flexes muscles). *GRRRRRRRRRRRR*
 
 Food in SoMA tends to be pricier than what I'm used to, which is [berkeley asian ghetto food](http://www.yelp.com/biz/durant-square-asian-ghetto-berkeley).
