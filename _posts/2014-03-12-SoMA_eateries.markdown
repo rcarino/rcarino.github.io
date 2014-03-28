@@ -40,6 +40,11 @@ Here is an unordered list of my favorite lunch spots around work.
   * [Chipotle](http://www.yelp.com/biz/chipotle-mexican-grill-san-francisco-11)
     + **+** Good ole' chipotle needs no description
     + **+** Get away with not paying for double meat a good amount during lunch rush-hour.
+  * [Ramen Underground](http://www.yelp.com/biz/ramen-underground-san-francisco) *added to list on 3/27/14*
+    + **+** decent portions, good ramen
+    + **+** rice bowls are big and meaty... yuuum
+    - **-** long lines during after work hours (5-7), ~ 20 minute waits
+    - **-** NoMA/ Downtown SF tax prices meals at ~ $15. Who can refuse that $2 egg and $2 corn? Seriously, who?
 
 I hope you enjoyed finding out about what sustains me. Surprisingly I'm not obese yet. 200lbs @ 5'11" at the time
 of writing (flexes muscles). *GRRRRRRRRRRRR*
