@@ -1,3 +1,6 @@
 name: Raymond Carino's Blog
 markdown: redcarpet
-pygments: true
+highlighter: true
+
+sass:
+  style: compressed
