@@ -4,17 +4,28 @@
   margin-right: auto;
 }
 
-%vertical-center-if-explicit-height {
-  position: relative;
+%vertical-center {
+  position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
 
-%center-if-non-static-parent {
+%center {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+%clearfix {
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
 }

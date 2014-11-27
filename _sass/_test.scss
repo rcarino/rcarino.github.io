@@ -29,7 +29,7 @@ video {
   }
 
   .site-info {
-    @extend %center-if-non-static-parent;
+    @extend %center;
 
     .name {
       font: 900 60px $default-font-family;
@@ -52,13 +52,29 @@ video {
 .section {
   @extend %horizontal-center-block;
   color: $light-gray;
-  font: 18px/1.6em $default-font-family;
+  font: 16px/1.43 $default-font-family;
   width: 66%;
 
   h1 {
-    color: $black;
-    font: 32px/1.2em $default-font-family;
+    color: $dark-gray;
+    font: 32px/1.1 $default-font-family;
     margin: 0 0 40px 0;
     text-align: center;
+  }
+}
+
+.about {
+  position: relative;
+  img {
+    border-radius: 10px;
+    display: inline-block;
+    width: 20%;
+  }
+  div {
+    display: inline-block;
+    margin-left: -5px;
+    padding: 0 0 0 30px;
+    vertical-align: top;
+    width: 80%;
   }
 }
