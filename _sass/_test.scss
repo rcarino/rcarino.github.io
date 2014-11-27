@@ -1,0 +1,62 @@
+@import "lib/base_classes";
+
+#pretzel-video {
+  position: absolute;
+  width: 100%;
+}
+
+video {
+  display: inline-block;
+  z-index: -2;
+}
+
+#hero-container {
+  height: 600px;
+  min-width: 1045px;
+}
+
+#hero {
+  color: $white;
+  z-index: -1;
+  position: absolute;
+  height: inherit;
+  width: inherit;
+  right: 0;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+}
+
+#site-info {
+  @extend %center-if-non-static-parent;
+
+  .name {
+    letter-spacing: 0.02em;
+    font: normal bold 68px/1em $default-font-family;
+  }
+
+  .description {
+    font: italic normal 24px/1.5em $default-font-family;
+    margin: 3px 0 0 0;
+    text-align: center;
+  }
+}
+
+#content-container {
+  @extend %horizontal-center-block;
+  padding: 96px 32px;
+}
+
+.section {
+  @extend %horizontal-center-block;
+  color: $light-gray;
+  font: 18px/1.6em $default-font-family;
+  width: 66%;
+
+  h1 {
+    color: $black;
+    font: 32px/1.2em $default-font-family;
+    margin: 0 0 40px 0;
+    text-align: center;
+  }
+}

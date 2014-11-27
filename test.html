@@ -4,33 +4,7 @@
     <meta charset="UTF-8">
     <title>Ray's new airbnb rip off portfolio site</title>
     <link rel="stylesheet" href="/stylesheets/global.css">
-    <style>
-        /* TODO: commenting out stuff that I'm not sure of for now */
-        #pretzel-video {
-            position: absolute;
-            width: 100%;
-        }
-
-        video {
-            display: inline-block;
-        }
-
-        #hero-container {
-            height: 600px;
-            min-width: 1045px;
-        }
-
-        #hero {
-            z-index: -1;
-            position: absolute;
-            height: inherit;
-            width: inherit;
-            right: 0;
-            left: 0;
-            top: 0;
-            overflow: hidden;
-        }
-    </style>
+    <link rel="stylesheet" href="/stylesheets/test.css">
 </head>
 <body>
 <div id="hero-container">
@@ -38,10 +12,23 @@
         <video loop="loop" preload="auto" id="pretzel-video" autoplay poster="/images/dust_on_the_coast.jpeg">
             <source src="/videos/dust_on_the_coast.mp4" type="video/mp4">
         </video>
+        <div id="site-info">
+            <div class="name">Raymond Carino</div>
+            <div class="description">Full-stack web and android developer</div>
+        </div>
     </div>
 </div>
-<div>
-    Testing GH-pages as video host
+
+<div id="content-container">
+
+    <div class="section">
+        <h1>It's sha boy Ray-Z in the building!</h1>
+        Ray-Z. Basketball phenom. Weightlifter. Software artist. Code is the essence of beauty. Ray-Z adeptly blends
+        minimalism, functional paradigms, and object oriented programming. The result is sheer elegance. Ray-Z's moniker is
+        an homage to the rapper Jay-Z. Similar to how Jay pushed pills and counted bills, Ray pushes code and counts
+        bills.
+    </div>
 </div>
+
 </body>
 </html>
