@@ -6,6 +6,7 @@
 }
 
 video {
+  @include abs-pos(0, auto, 0, auto);
   display: inline-block;
   z-index: -2;
 }
