@@ -6,8 +6,9 @@
 }
 
 video {
-  @include abs-pos(0, auto, 0, auto);
+  @include abs-pos(auto, auto, 0, auto);
   display: inline-block;
+  height: auto;
   z-index: -2;
 }
 
@@ -44,8 +45,7 @@ video {
   }
 }
 
-
-#content-container {
+.content {
   @extend %horizontal-center-block;
   padding: 96px 32px;
 }
