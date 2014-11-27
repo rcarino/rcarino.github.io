@@ -4,6 +4,9 @@ html {
 }
 *, *:before, *:after {
   box-sizing: inherit;
+  text-rendering: optimizelegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {

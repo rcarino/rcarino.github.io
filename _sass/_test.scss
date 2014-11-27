@@ -1,4 +1,4 @@
-@import "lib/base_classes";
+@import "lib";
 
 #pretzel-video {
   position: absolute;
@@ -16,31 +16,33 @@ video {
 }
 
 #hero {
+  @include abs-pos(0, 0, auto, 0);
   color: $white;
   z-index: -1;
-  position: absolute;
   height: inherit;
   width: inherit;
-  right: 0;
-  left: 0;
-  top: 0;
   overflow: hidden;
-}
 
-#site-info {
-  @extend %center-if-non-static-parent;
-
-  .name {
-    letter-spacing: 0.02em;
-    font: normal bold 68px/1em $default-font-family;
+  .logo {
+    @include abs-pos(22px, auto, auto, 18px);
+    font: 900 22px $default-font-family;
   }
 
-  .description {
-    font: italic normal 24px/1.5em $default-font-family;
-    margin: 3px 0 0 0;
-    text-align: center;
+  .site-info {
+    @extend %center-if-non-static-parent;
+
+    .name {
+      font: 900 60px $default-font-family;
+    }
+
+    .description {
+      font: italic bold 18px/1.1 $default-font-family;
+      margin: 15px 0 0 0;
+      text-align: center;
+    }
   }
 }
+
 
 #content-container {
   @extend %horizontal-center-block;
