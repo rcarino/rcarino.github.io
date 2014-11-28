@@ -3,3 +3,4 @@ Gemfile.lock
 .idea/
 .sass-cache
 *~
+npm-debug.log
