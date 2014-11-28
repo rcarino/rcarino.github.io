@@ -1,0 +1,38 @@
+.content {
+  @extend %horizontal-center-block;
+  padding: 20px 10px;
+}
+
+.section {
+  @extend %horizontal-center-block;
+  color: $light-gray;
+  font: 16px/1.43 $default-font-family;
+
+  h1 {
+    color: $dark-gray;
+    font: 26px/1.1 $default-font-family;
+    margin: 0 0 10px 0;
+    text-align: center;
+  }
+}
+
+@media(min-width: 570px) {
+  .section {
+    width: 550px;
+  }
+}
+
+@media(min-width: 800px) {
+  .section {
+    width: 700px;
+
+    h1 {
+      font: 32px/1.1 $default-font-family;
+      margin: 0 0 20px 0;
+    }
+  }
+
+  .content {
+    padding: 60px 32px;
+  }
+}

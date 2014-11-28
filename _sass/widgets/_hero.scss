@@ -1,0 +1,61 @@
+.hero {
+  color: $white;
+  height: 200px;
+  position: relative;
+
+  .video-container {
+    @include abs-pos(0, auto, auto, 0);
+    height: inherit;
+    width: 100%;
+  }
+
+  video {
+    @include abs-pos(auto, auto, 0, auto);
+    width: 100%;
+  }
+
+  .logo {
+    @include abs-pos(5px, auto, auto, 10px);
+    font: 900 15px $default-font-family;
+  }
+
+  .site-info {
+    @extend %center;
+
+    .name {
+      font: 900 20px $default-font-family;
+      text-align: center;
+    }
+
+    .description {
+      font: italic bold 15px/1.1 $default-font-family;
+      text-align: center;
+    }
+  }
+}
+
+@media(min-width: 700px) {
+  .hero {
+    height: 394px;
+  }
+}
+
+@media(min-width: 1070px) {
+  .hero {
+    height: 600px;
+
+    .site-info {
+      .name {
+        font: 900 60px $default-font-family;
+      }
+
+      .description {
+        font: italic bold 18px/1.1 $default-font-family;
+      }
+    }
+
+    .logo {
+      font: 900 22px $default-font-family;
+    }
+  }
+}
