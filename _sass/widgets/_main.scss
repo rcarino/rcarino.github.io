@@ -7,7 +7,7 @@ section {
   @extend %horizontal-center-block;
   color: $light-gray;
   font: 16px/1.43 $default-font-family;
-  margin: 0 0 40px 0;
+  margin-bottom: 40px;
 
   h1 {
     color: $dark-gray;
@@ -40,4 +40,12 @@ section {
       margin: 0 0 20px 0;
     }
   }
+}
+
+footer {
+  background-color: $light-black;
+  color: $white;
+  padding: 20px;
+  text-align: center;
+  width: 100%;
 }
