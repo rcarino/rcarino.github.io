@@ -21,7 +21,6 @@
 
   .links {
     @include abs-pos(5px, 10px, auto, auto);
-    list-style: none;
 
     a {
       color: inherit;
