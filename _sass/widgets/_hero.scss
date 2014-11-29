@@ -1,5 +1,6 @@
 .hero {
   color: $white;
+  font: 900 15px $default-font-family;
   height: 200px;
   position: relative;
 
@@ -16,7 +17,16 @@
 
   .logo {
     @include abs-pos(5px, auto, auto, 10px);
-    font: 900 15px $default-font-family;
+  }
+
+  .links {
+    @include abs-pos(5px, 10px, auto, auto);
+    list-style: none;
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
   }
 
   .site-info {
@@ -42,6 +52,7 @@
 
 @media(min-width: 1070px) {
   .hero {
+    font: 900 22px $default-font-family;
     height: 600px;
 
     .site-info {
@@ -52,10 +63,6 @@
       .description {
         font: italic bold 18px/1.1 $default-font-family;
       }
-    }
-
-    .logo {
-      font: 900 22px $default-font-family;
     }
   }
 }
