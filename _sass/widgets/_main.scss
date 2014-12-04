@@ -1,6 +1,6 @@
 main {
   @extend %horizontal-center-block;
-  padding: 20px 15px;
+  padding: 30px 25px 0 20px;
 }
 
 section {
@@ -21,17 +21,7 @@ section {
   }
 }
 
-@media(min-width: 570px) {
-  section {
-    width: 550px;
-  }
-}
-
 @media(min-width: 800px) {
-  main {
-    padding: 60px 32px;
-  }
-
   section {
     width: 700px;
 

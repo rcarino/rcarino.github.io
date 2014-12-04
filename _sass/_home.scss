@@ -3,37 +3,14 @@
 @import "widgets/main";
 @import "widgets/about";
 
-//body {
-//  display: flex;
-//  flex-direction: column;
-//}
-
 .img-group {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+
   img {
-    @extend %horizontal-center-block;
-    display: block;
     height: 470px;
+    margin: auto auto 20px auto;
     width: 300px;
-  }
-}
-
-@media(max-width: 620px) {
-  .img-group img + img {
-    margin-top: 20px;
-  }
-}
-
-@media(min-width: 620px) {
-  .img-group {
-    img {
-      display: inline-block;
-    }
-
-    img:nth-of-type(even) {
-    }
-
-    img:nth-of-type(2) ~ img {
-      margin-top: 20px;
-    }
   }
 }
