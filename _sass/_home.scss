@@ -8,9 +8,12 @@
   flex-flow: row wrap;
   width: 100%;
 
-  img {
-    height: 470px;
+  figure {
     margin: auto auto 20px auto;
-    width: 300px;
+
+    img {
+      height: 470px;
+      width: 300px;
+    }
   }
 }

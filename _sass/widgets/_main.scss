@@ -12,8 +12,11 @@ section {
   h1 {
     color: $dark-gray;
     font: 26px/1.1 $h1-font-family;
-    margin: 0 0 10px 0;
     text-align: center;
+  }
+
+  h1, p {
+    margin-bottom: 20px;
   }
 
   img {
@@ -27,7 +30,7 @@ section {
 
     h1 {
       font: 32px/1.1 $h1-font-family;
-      margin: 0 0 20px 0;
+//      margin: 0 0 20px 0;
     }
   }
 }
