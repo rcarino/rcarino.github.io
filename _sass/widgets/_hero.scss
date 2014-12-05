@@ -4,7 +4,7 @@ video {
 
 .hero {
   color: $white;
-  font: 15px $default-font-family;
+  font: 15px $regular-font-family;
   font-weight: 900;
   position: relative;
 
@@ -34,7 +34,7 @@ video {
     }
 
     .description {
-      font: italic bold 15px/1.1 $default-font-family;
+      font: italic bold 15px/1.1 $h2-font-family;
     }
   }
 }
@@ -49,7 +49,7 @@ video {
       }
 
       .description {
-        font: italic bold 16px/1.1 $default-font-family;
+        font: italic bold 16px/1.1 $regular-font-family;
       }
     }
   }
@@ -65,7 +65,7 @@ video {
       }
 
       .description {
-        font: italic bold 18px/1.1 $default-font-family;
+        font: italic bold 18px/1.1 $regular-font-family;
       }
     }
   }

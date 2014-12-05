@@ -10,7 +10,15 @@ html {
 }
 
 body {
-  font-family: $default-font-family;
+  font-family: $regular-font-family;
+}
+
+h1 {
+  font-family: $h1-font-family;
+}
+
+h2 {
+  font-family: $h2-font-family;
 }
 
 ul {

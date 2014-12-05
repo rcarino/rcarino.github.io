@@ -6,12 +6,12 @@ main {
 section {
   @extend %horizontal-center-block;
   color: $light-gray;
-  font: 16px/1.43 $default-font-family;
+  font: 20px/1.43 $regular-font-family;
   margin-bottom: 40px;
 
   h1 {
     color: $dark-gray;
-    font: 26px/1.1 $default-font-family;
+    font: 26px/1.1 $h1-font-family;
     margin: 0 0 10px 0;
     text-align: center;
   }
@@ -26,7 +26,7 @@ section {
     width: 700px;
 
     h1 {
-      font: 32px/1.1 $default-font-family;
+      font: 32px/1.1 $h1-font-family;
       margin: 0 0 20px 0;
     }
   }
