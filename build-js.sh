@@ -1,1 +1,1 @@
-browserify javascripts/app/home.js | uglifyjs > javascripts/min/home.js
+browserify javascripts/app/main.js | uglifyjs > javascripts/min/main.js
