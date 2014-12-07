@@ -3,6 +3,11 @@
   flex-flow: row wrap;
   padding: 25px 0;
 
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
   .post-description {
     flex: 1 auto;
     font: 300 18px/1.4 $regular-font-family;

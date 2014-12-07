@@ -1,15 +1,15 @@
 @import 'footer';
 
 main {
-  @extend %horizontal-center-block;
   padding: 30px 25px 0 20px;
 }
 
 section {
-  @extend %horizontal-center-block;
+  display: flex;
   color: $light-gray;
+  flex-flow: column wrap;
   font: 20px/1.43 $regular-font-family;
-  margin-bottom: 40px;
+  margin: 0 auto 40px auto;
 
   h1 {
     color: $dark-gray;
@@ -20,7 +20,7 @@ section {
     text-align: center;
   }
 
-  h1, p {
+  h1, p, ol {
     margin-bottom: 20px;
   }
 
@@ -36,9 +36,13 @@ section {
 
   section {
     width: 700px;
-
-    h1 {
-      font: 32px/1.1 $h1-font-family;
-    }
   }
+
+  h1 {
+    font: 32px/1.1 $h1-font-family;
+  }
+}
+
+#disqus_thread {
+  padding-top: 40px;
 }

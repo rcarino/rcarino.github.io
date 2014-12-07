@@ -10,14 +10,13 @@
 .img-group {
   display: flex;
   flex-flow: row wrap;
-  width: 100%;
 
   figure {
     margin: auto auto 20px auto;
+    width: 300px;
 
     img {
       height: 470px;
-      width: 300px;
     }
   }
 }
