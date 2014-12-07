@@ -29,8 +29,7 @@ ul {
   list-style: none;
 }
 
-ol {
-  font-size: 85%;
+ol, ul {
   list-style-position: inside;
   padding-left: 25px;
 }
@@ -38,5 +37,13 @@ ol {
 pre {
   background-color: #f7f7f7;
   border-radius: 3px;
+}
+
+code, pre, ol, ul {
   font-size: 85%;
+}
+
+code {
+  display: block;
+  overflow: auto;
 }

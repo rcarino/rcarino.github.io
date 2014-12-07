@@ -72,7 +72,7 @@ in hindsight. Instead, I ran through a single order by myself and bypassed a per
 a free lunch, courtesy of my app.
 
 All in all, I definitely felt an incredible builder's high after finishing scrumdiddlyumptious, and I'm hungry for more.
-You can check out the project at [http://www.shaboyrayz.com/scrumdiddlyumptious/app/#/find-restaurants](http://www.shaboyrayz.com/scrumdiddlyumptious/app/#/find-restaurants). Disclaimer: we
+You can check out the project [here](http://www.shaboyrayz.com/scrumdiddlyumptious/app/#/find-restaurants). Disclaimer: we
 have ceased to support it since the end of the demo, so YMMV.
 
 Shout out to my boy [Justin Dela Cruz](https://github.com/justindelacruz), my project partner for scrumdiddlyumptious.
