@@ -1,6 +1,8 @@
 ---
 layout: post
 title:  "How it's made"
+description: "How I built this site using jekyll"
+length: "5 min"
 categories: how-to
 ---
 First off, I want to say that I don't aspire to make this the most informative source on how to implement a blog. Rather, this

@@ -1,6 +1,8 @@
 ---
 layout: post
 title:  "Hello world!"
+description: "My first post"
+length: "5 min"
 categories: general
 ---
 

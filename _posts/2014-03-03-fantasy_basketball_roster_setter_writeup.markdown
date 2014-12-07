@@ -1,6 +1,8 @@
 ---
 layout: post
 title:  "Fantasy Basketball Side Projects"
+description: "Automating assignment of rosters in ESPN and Yahoo fantasy leagues"
+length: "5 min"
 categories: technical-writeup
 ---
 

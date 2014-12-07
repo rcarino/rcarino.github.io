@@ -1,6 +1,8 @@
 ---
 layout: post
 title:  "CBS Hackathon"
+description: "Or how hardcoding won me a JBL Pulse"
+length: "5 min"
 categories: hackathons
 ---
 I completed my first hackathon today, the CBS Interactive 'Next Generation' Hackathon. The prime directive

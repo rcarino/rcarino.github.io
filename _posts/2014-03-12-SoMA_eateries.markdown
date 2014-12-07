@@ -1,6 +1,8 @@
 ---
 layout: post
-title:  "SoMA eateries. My go-to spots."
+title:  "SoMA eateries."
+description: "My go-to spots."
+length: "5 min"
 categories: foods such-delicious wow
 ---
 Here is an unordered list of my favorite lunch spots around work.

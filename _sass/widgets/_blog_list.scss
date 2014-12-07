@@ -1,0 +1,36 @@
+.post-preview {
+  display: flex;
+  flex-flow: row wrap;
+  padding: 25px 0;
+
+  .post-description {
+    flex: 1 auto;
+    font: 300 18px/1.4 $regular-font-family;
+    padding-right: 20px;
+
+    h2 {
+      font: 700px 22px/1.3 $h2-font-family;
+    }
+
+    .info {
+      color: rgba(0,0,0,0.3);
+      font-size: 13px;
+    }
+  }
+
+  img {
+    height: 90px;
+    width: 90px;
+  }
+
+  + .post-preview {
+    border-top: 1px solid rgba(0,0,0,0.05);
+  }
+}
+
+@media(min-width: 500px) {
+  .post-preview img {
+    height: 120px;
+    width: 140px;
+  }
+}

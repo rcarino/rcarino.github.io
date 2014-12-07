@@ -18,11 +18,6 @@ video {
 
   .links {
     @include abs-pos(15px, 15px, auto, auto);
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
   }
 
   .site-info {

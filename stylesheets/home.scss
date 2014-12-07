@@ -3,4 +3,21 @@
 # only Main files contain this front matter, not partials.
 ---
 @import "lib";
-@import "home";
+@import "widgets/hero";
+@import "widgets/main";
+@import "widgets/about";
+
+.img-group {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+
+  figure {
+    margin: auto auto 20px auto;
+
+    img {
+      height: 470px;
+      width: 300px;
+    }
+  }
+}
