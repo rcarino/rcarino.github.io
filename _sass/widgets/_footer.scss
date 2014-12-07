@@ -1,0 +1,15 @@
+footer {
+  background-color: $light-black;
+  color: $white;
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+
+  > a {
+    color: inherit;
+
+    + a {
+      margin-left: 30px;
+    }
+  }
+}
