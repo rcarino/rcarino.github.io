@@ -2,44 +2,62 @@
 layout: default
 comments: true
 asset: post # Name of css and js files
-
-title: "default title"
-description: "default description"
-header-image: false
-length: "n hours"
 ---
-<header>
-    <a href="/" class="logo">shaboyrayz</a>
-    <div class="info-and-links">
-        <div class="read-time">12 min</div>
-        <div><a href="/legacy">Blog</a></div>
+
+<div class="hero no-media">
+<!--<div class="hero">-->
+    <!--<video loop="loop" preload="auto" autoplay poster="/images/dust_on_the_coast.jpeg">-->
+        <!--<source src="/videos/dust_on_the_coast.mp4" type="video/mp4">-->
+    <!--</video>-->
+    <nav>
+        <a class="logo" href="/">shaboyrayz</a>
+        <ul class="links">
+            <li>
+                <a href="/blog">Blog</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="site-info">
+        <div class="name">{{ page.title }}</div>
+        <div class="description">{{ page.description }}</div>
     </div>
-    <div class="post-info">
-        <div class="author">Raymond Carino</div>
-        <div class="created">{{ page.date | date_to_string }}</div>
-    </div>
-    {% if page.header-image %}
-        <img class="header-image" href="images/{{ header-image }}">
-    {% endif %}
-</header>
+</div>
+
+
+<!--<header>-->
+    <!--<a href="/" class="logo">shaboyrayz</a>-->
+    <!--<div class="info-and-links">-->
+        <!--<div class="read-time">12 min</div>-->
+        <!--<div><a href="/legacy">Blog</a></div>-->
+    <!--</div>-->
+    <!--<div class="post-info">-->
+        <!--<div class="author">Raymond Carino</div>-->
+        <!--<div class="created">{{ page.date | date_to_string }}</div>-->
+    <!--</div>-->
+    <!--{% if page.header-image %}-->
+        <!--<img class="header-image" href="images/{{ header-image }}">-->
+    <!--{% endif %}-->
+<!--</header>-->
 
 <main>
-    {{ content }}
+    <section>
+        {{ content }}
 
-    {% if page.comments %}
-    <div id="disqus_thread"></div>
-    <script type="text/javascript">
-        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-        var disqus_shortname = 'wwwshaboyrayzcom'; // required: replace example with your forum shortname
+        {% if page.comments %}
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = 'wwwshaboyrayzcom'; // required: replace example with your forum shortname
 
-        /* * * DON'T EDIT BELOW THIS LINE * * */
-        (function() {
-            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-        })();
-    </script>
-    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-    {% endif %}
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        {% endif %}
+    </section>
 </main>
