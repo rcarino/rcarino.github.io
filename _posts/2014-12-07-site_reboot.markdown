@@ -36,10 +36,10 @@ the web forward and use flexbox when applicable.
 ## Browserify
 I used the [Browserify source](http://browserify.org/articles.html) to figure out how to integrate it in
 my project. Coming from [RequireJS](http://requirejs.org/), Browserify is simpler to use.
-Browserify allows you to inject javascript synchronously in one or a few modules. RequireJS allows
-one to create multiple injection points for javascripts via lazy loading. I've never had a clear use case for lazy loading,
-so I consider lazy loading a cute and fancy premature optimization. Browserify is now my preferred mechanism of javascript
-dependency loading because of its ease of use.
+Browserify allows you to inject javascript synchronously in one or a few modules. RequireJS is more complicated. One can
+create multiple injection points for javascripts via lazy loading. I've never had a clear use case for lazy loading.
+As a result, I consider lazy loading a cute and fancy premature optimization. Browserify is now my preferred mechanism of javascript
+dependency loading because it's so easy to set up.
 
 ## Jekyll
 My site used to exist on a [single page](/legacy). Naturally, I learned more about Jekyll by building a meatier project.
