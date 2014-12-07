@@ -8,7 +8,9 @@ asset: blog_list # Name of css and js files
     <video loop="loop" preload="auto" autoplay poster="/images/blog_header.jpg">
         <source src="/videos/blog_header.mp4" type="video/mp4">
     </video>
-    <a class="logo" href="/">shaboyrayz</a>
+    <nav>
+        <a class="logo" href="/">shaboyrayz</a>
+    </nav>
     <div class="site-info">
         <div class="name">Welcome to my blog</div>
         <div class="description">Have fun reading</div>
@@ -18,16 +20,19 @@ asset: blog_list # Name of css and js files
 <main>
     <section class="blog-list">
         {% for post in site.posts %}
-            <div class="post-preview">
-                <div class="post-description">
-                    <a href="{{ post.url }}"><h2>{{ post.title }}</h2></a>
-                    <a href="{{ post.url }}"><div>{{ post.description }}</div></a>
-                    <div class="info">{{ post.date | date_to_string }} {{ post.length }} read</div>
-                </div>
-                {% if post.header-image %}
-                    <a href="{{ post.url }}"><img src="/images/{{ post.header-image }}"></a>
-                {% endif %}
+        <div class="post-preview">
+            <div class="post-description">
+                <a href="{{ post.url }}"><h2>{{ post.title }}</h2></a>
+                <a href="{{ post.url }}">
+                    <div>{{ post.description }}</div>
+                </a>
+
+                <div class="info">{{ post.date | date_to_string }} {{ post.length }} read</div>
             </div>
+            {% if post.header-image %}
+            <a href="{{ post.url }}"><img src="/images/{{ post.header-image }}"></a>
+            {% endif %}
+        </div>
         {% endfor %}
     </section>
 </main>

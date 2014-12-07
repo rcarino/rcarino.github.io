@@ -3,44 +3,41 @@ layout: default
 comments: true
 asset: post # Name of css and js files
 ---
-
-<div class="hero no-media">
-<!--<div class="hero">-->
-    <!--<video loop="loop" preload="auto" autoplay poster="/images/dust_on_the_coast.jpeg">-->
-        <!--<source src="/videos/dust_on_the_coast.mp4" type="video/mp4">-->
-    <!--</video>-->
-    <nav>
-        <a class="logo" href="/">shaboyrayz</a>
+{% if page.header-image %}
+    <div class="hero">
+        <img src="/images/{{ page.header-image }}">
+        <nav>
+            <!-- TODO: grouping created date with logo inside link is hacky -->
+            <a class="logo" href="/">shaboyrayz <span class="created-date">{{ page.date | date_to_string }}</span></a>
+            <ul class="links">
+                <!-- TODO: grouping read time with links is hacky -->
+                <li class="length">{{ page.length }}</li>
+                <li><a href="/blog">Blog</a></li>
+            </ul>
+        </nav>
+        <div class="site-info">
+            <div class="name">{{ page.title }}</div>
+            <div class="description">{{ page.description }}</div>
+        </div>
+    </div>
+{% else %}
+    <nav class="no-background">
+        <!-- TODO: grouping created date with logo inside link is hacky -->
+        <a class="logo" href="/">shaboyrayz <span class="created-date">{{ page.date | date_to_string }}</span></a>
         <ul class="links">
-            <li>
-                <a href="/blog">Blog</a>
-            </li>
+            <!-- TODO: grouping read time with links is hacky -->
+            <li class="length">{{ page.length }}</li>
+            <li><a href="/blog">Blog</a></li>
         </ul>
     </nav>
-    <div class="site-info">
-        <div class="name">{{ page.title }}</div>
-        <div class="description">{{ page.description }}</div>
-    </div>
-</div>
-
-
-<!--<header>-->
-    <!--<a href="/" class="logo">shaboyrayz</a>-->
-    <!--<div class="info-and-links">-->
-        <!--<div class="read-time">12 min</div>-->
-        <!--<div><a href="/legacy">Blog</a></div>-->
-    <!--</div>-->
-    <!--<div class="post-info">-->
-        <!--<div class="author">Raymond Carino</div>-->
-        <!--<div class="created">{{ page.date | date_to_string }}</div>-->
-    <!--</div>-->
-    <!--{% if page.header-image %}-->
-        <!--<img class="header-image" href="images/{{ header-image }}">-->
-    <!--{% endif %}-->
-<!--</header>-->
+{% endif %}
 
 <main>
     <section>
+        {% if page.header-image == nil %}
+            <h1>{{ page.title }}</h1>
+            <h2>{{ page.description }}</h2>
+        {% endif %}
         {{ content }}
 
         {% if page.comments %}

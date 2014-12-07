@@ -1,23 +1,12 @@
-video {
-  width: 100%;
-}
+@import 'nav';
 
 .hero {
   color: $white;
-  font: 15px $regular-font-family;
-  font-weight: 900;
+  font: 900 15px $regular-font-family;
   position: relative;
 
-  video {
+  video, img {
     width: 100%;
-  }
-
-  .logo {
-    @include abs-pos(15px, auto, auto, 15px);
-  }
-
-  .links {
-    @include abs-pos(15px, 15px, auto, auto);
   }
 
   .site-info {
@@ -35,19 +24,6 @@ video {
 
   nav {
     @include abs-pos(0, 0, auto, 0);
-    height: 65px;
-  }
-}
-
-.hero.no-media {
-  color: $black;
-  height: 150px;
-
-  // Undoes centering mixin. Only center horizontally.
-  .site-info {
-    bottom: 0;
-    top: auto;
-    transform: translate(-50%, 0);
   }
 }
 
