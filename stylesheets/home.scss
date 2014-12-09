@@ -7,6 +7,12 @@
 @import "widgets/main";
 @import "widgets/about";
 
+@media(min-width: 1250px) {
+  #android_side_projects {
+    width: 100%;
+  }
+}
+
 .img-group {
   display: flex;
   flex-flow: row wrap;

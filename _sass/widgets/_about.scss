@@ -2,11 +2,11 @@
   display: flex;
   flex-flow: row wrap;
 
-  figure, div {
+  > figure, > div {
     margin: auto;
   }
 
-  div {
+  > div {
     margin-bottom: 30px;
   }
 
