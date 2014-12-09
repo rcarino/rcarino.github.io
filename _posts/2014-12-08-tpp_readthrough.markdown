@@ -5,6 +5,6 @@ description: "My thoughts, notes, and TLDR"
 header-image: tpp_readthrough.jpg
 length: "7 min"
 categories: read-through
-published: false;
+published: false
 ---
 Pending.
