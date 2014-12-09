@@ -1,7 +1,6 @@
 nav {
   align-items: flex-start;
   display: flex;
-  font: 900 15px $regular-font-family;
   flex-flow: row nowrap;
   padding: 15px;
 
@@ -13,6 +12,7 @@ nav {
   .logo {
     align-self: flex-start;
     flex: 1 auto;
+    font: 900 15px $regular-font-family;
   }
 
   .created-date {
@@ -24,6 +24,8 @@ nav {
     align-items: center;
     display: flex;
     flex-flow: row nowrap;
+    font: normal 14px $regular-font-family;
+    margin: 10px 0;
 
     a {
       border: 1px solid #ffffff;
@@ -47,13 +49,13 @@ nav {
 }
 
 @media(min-width: 590px) {
-  nav {
+  nav .logo {
     font-size: 18px;
   }
 }
 
 @media(min-width: 974px) {
-  nav {
+  nav .logo {
     font-size: 22px;
   }
 }

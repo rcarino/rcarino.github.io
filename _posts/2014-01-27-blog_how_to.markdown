@@ -39,7 +39,7 @@ cd rcarino.github.io
 jekyll serve
 {% endhighlight %}
 
-The follow site should be availabe on localhost:4000
+The following site should be availabe on localhost:4000
 ![Ugly fresh jekyll site](/images/blog_how_to/vanilla_jekyll.png)
 
 To get the site prettier, I applied a premade theme by following the steps in [this guide](https://github.com/blog/1081-instantly-beautiful-project-pages)
