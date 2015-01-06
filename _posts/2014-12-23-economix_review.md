@@ -3,6 +3,7 @@ layout: post
 title:  "Review of Economix"
 description: "A graphic novel about how the economy works"
 length: "2 min"
+thumb: economix_review_header.jpg
 categories: review
 ---
 ![Funny amulet picture](/images/economix_review_header.jpg)

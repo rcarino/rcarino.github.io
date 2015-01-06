@@ -31,6 +31,8 @@ asset: blog_list # Name of css and js files
             </div>
             {% if post.header-image %}
             <a href="{{ post.url }}"><img src="/images/{{ post.header-image }}"></a>
+            {% elsif post.thumb %}
+            <a href="{{ post.url }}"><img src="/images/{{ post.thumb }}"></a>
             {% endif %}
         </div>
         {% endfor %}
