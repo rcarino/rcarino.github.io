@@ -4,24 +4,9 @@ comments: true
 asset: post # Name of css and js files
 ---
 {% if page.header-image %}
-    <div class="hero">
-        <img src="/images/{{ page.header-image }}">
-        <nav>
-            <!-- TODO: grouping created date with logo inside link is hacky -->
-            <a class="logo" href="/">shaboyrayz <span class="created-date">{{ page.date | date_to_string }}</span></a>
-            <ul class="links">
-                <!-- TODO: grouping read time with links is hacky -->
-                <li class="length">{{ page.length }}</li>
-                <li><a href="/blog">Blog</a></li>
-            </ul>
-        </nav>
-        <div class="site-info">
-            <div class="name">{{ page.title }}</div>
-            <div class="description">{{ page.description }}</div>
-        </div>
-    </div>
-{% else %}
-    <nav class="no-background">
+<div class="hero">
+    <img src="/images/{{ page.header-image }}">
+    <nav>
         <!-- TODO: grouping created date with logo inside link is hacky -->
         <a class="logo" href="/">shaboyrayz <span class="created-date">{{ page.date | date_to_string }}</span></a>
         <ul class="links">
@@ -30,14 +15,39 @@ asset: post # Name of css and js files
             <li><a href="/blog">Blog</a></li>
         </ul>
     </nav>
+    <div class="site-info">
+        <div class="name">{{ page.title }}</div>
+        <div class="description">{{ page.description }}</div>
+    </div>
+</div>
+{% else %}
+<nav class="no-background">
+    <!-- TODO: grouping created date with logo inside link is hacky -->
+    <a class="logo" href="/">shaboyrayz <span class="created-date">{{ page.date | date_to_string }}</span></a>
+    <ul class="links">
+        <!-- TODO: grouping read time with links is hacky -->
+        <li class="length">{{ page.length }}</li>
+        <li><a href="/blog">Blog</a></li>
+    </ul>
+</nav>
 {% endif %}
 
 <main>
-    <section>
-        {% if page.header-image == nil %}
-            <h1>{{ page.title }}</h1>
-            <h2>{{ page.description }}</h2>
+
+    {% if page.header-image == nil %}
+    <header>
+        <h1>{{ page.title }}</h1>
+        <h2>{{ page.description }}</h2>
+        {% if page.header-image-small %}
+            <!-- TODO: Image takes up full width if not wrapped in container div. Find way to not use container div -->
+            <div>
+                <img src="/images/{{ page.header-image-small }}">
+            </div>
         {% endif %}
+    </header>
+    {% endif %}
+
+    <section>
         {{ content }}
 
         {% if page.comments %}
@@ -47,13 +57,16 @@ asset: post # Name of css and js files
             var disqus_shortname = 'wwwshaboyrayzcom'; // required: replace example with your forum shortname
 
             /* * * DON'T EDIT BELOW THIS LINE * * */
-            (function() {
-                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            (function () {
+                var dsq = document.createElement('script');
+                dsq.type = 'text/javascript';
+                dsq.async = true;
                 dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
                 (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
             })();
         </script>
-        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
+            Disqus.</a></noscript>
         <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
         {% endif %}
     </section>

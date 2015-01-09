@@ -1,7 +1,11 @@
 .post-preview {
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: row nowrap;
   padding: 25px 0;
+
+  > a {
+    flex-shrink: 0;
+  }
 
   a {
     color: inherit;
@@ -19,7 +23,7 @@
     }
 
     .info {
-      color: rgba(0,0,0,0.3);
+      color: rgba(0, 0, 0, 0.3);
       font-size: 13px;
     }
   }
@@ -30,7 +34,7 @@
   }
 
   + .post-preview {
-    border-top: 1px solid rgba(0,0,0,0.05);
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
   }
 }
 

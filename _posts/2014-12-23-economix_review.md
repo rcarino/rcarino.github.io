@@ -3,10 +3,9 @@ layout: post
 title:  "Review of Economix"
 description: "A graphic novel about how the economy works"
 length: "2 min"
-thumb: economix_review_header.jpg
+header-image-small: economix_review_header.jpg
 categories: review
 ---
-![Funny amulet picture](/images/economix_review_header.jpg)
 
 I highly suggest this book. Its cute pictures made economics highly accessible. I am now capable of name dropping Ricardian
 economic models and Malthusian population growth limits in casual conversations. Quite a feat since I've never taken
