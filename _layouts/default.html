@@ -8,7 +8,9 @@
     <link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
 
     <link rel="stylesheet" href="/stylesheets/global.css">
-    <link rel="stylesheet" href="/stylesheets/{{ page.asset }}.css">
+    {% if page.layout != "default" %}
+        <link rel="stylesheet" href="/stylesheets/{{ page.layout }}.css">
+    {% endif %}
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed|Alegreya:700"/>
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
@@ -24,6 +26,7 @@
         ga('create', 'UA-47565045-1', 'shaboyrayz.com');
         ga('send', 'pageview');
     </script>
+     
 </head>
 
 <body>

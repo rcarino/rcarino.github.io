@@ -1,6 +1,6 @@
 name: Raymond Carino's Blog
-markdown: redcarpet
-highlighter: true
+markdown: kramdown
+highlighter: rouge
 
 sass:
   style: compressed

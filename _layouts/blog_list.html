@@ -1,10 +1,40 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title></title>
-</head>
-<body>
+---
+layout: default
+---
 
-</body>
-</html>
+<div class="hero">
+    <video loop="loop" preload="auto" autoplay poster="/images/blog_header.jpg">
+        <source src="/videos/blog_header.mp4" type="video/mp4">
+    </video>
+    <nav>
+        <a class="logo" href="/">shaboyrayz</a>
+    </nav>
+    <div class="site-info">
+        <div class="name">Welcome To My Dog</div>
+        <div class="description">Wait, I Meant Blog</div>
+    </div>
+</div>
+
+<main>
+    <section class="blog-list">
+        {% for post in site.posts %}
+        <div class="post-preview">
+            <div class="post-description">
+                <a href="{{ post.url }}"><h2>{{ post.title }}</h2></a>
+                <a href="{{ post.url }}">
+                    <div>{{ post.description }}</div>
+                </a>
+
+                <div class="info">{{ post.date | date_to_string }} {{ post.length }} read</div>
+            </div>
+            {% if post.header-image %}
+            <a href="{{ post.url }}"><img src="/images/{{ post.header-image }}"></a>
+            {% elsif post.header-image-small %}
+            <a href="{{ post.url }}"><img src="/images/{{ post.header-image-small }}"></a>
+            {% else %}
+            <a href="{{ post.url }}"><img src="/images/placeholder.png"></a>
+            {% endif %}
+        </div>
+        {% endfor %}
+    </section>
+</main>
