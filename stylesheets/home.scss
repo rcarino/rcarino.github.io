@@ -6,23 +6,3 @@
 @import "widgets/hero";
 @import "widgets/main";
 @import "widgets/about";
-
-@media(min-width: 1250px) {
-  #android_side_projects {
-    width: 100%;
-  }
-}
-
-.img-group {
-  display: flex;
-  flex-flow: row wrap;
-
-  figure {
-    margin: auto auto 20px auto;
-    width: 300px;
-
-    img {
-      height: 470px;
-    }
-  }
-}

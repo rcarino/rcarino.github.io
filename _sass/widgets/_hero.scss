@@ -38,6 +38,12 @@
   nav {
     @include abs-pos(0, 0, auto, 0);
     z-index: 1;
+
+    .links {
+      li {
+        margin: 0 0 0 12px;
+      }
+    }
   }
 }
 

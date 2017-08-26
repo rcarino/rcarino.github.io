@@ -1,0 +1,34 @@
+---
+# this ensures Jekyll reads the file to be transformed into CSS later
+# only Main files contain this front matter, not partials.
+---
+@import "lib";
+@import "widgets/hero";
+@import "widgets/main";
+
+@media(min-width: 1250px) {
+  #android_side_projects {
+    width: 100%;
+  }
+}
+
+.img-group {
+  display: flex;
+  flex-flow: row wrap;
+
+  figure {
+    margin: auto auto 20px auto;
+    width: 300px;
+
+    img {
+      height: 470px;
+    }
+  }
+}
+
+.hero {
+  video {
+    background-color: black;
+    max-height: 700px;
+  }
+}
