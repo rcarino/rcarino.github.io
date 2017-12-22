@@ -20,6 +20,7 @@ gym helped.
 * Can't lower deadlifts quickly. I live on the second floor and the eccentric portion (lowering phase) of my deadlifts
 turn into slow descending Romanian Deadlifts.
 * Can't test 1 rep maxes. My squat stands don't have safeties. If I fail, I risk pissed off lower floor neighbors.
+* [Unhappy roommate](http://www.justindelacruz.me/)
 
 **The equipment** *(full disclosure, purchases through the amazon links will pay me commission)*:
 1. [CAP Barbell, $130](https://www.amazon.com/gp/product/B001K4OPY2/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B001K4OPY2&linkCode=as2&tag=shaboyrayz-20&linkId=9c5116b403badaff9e8621674e1de480)
