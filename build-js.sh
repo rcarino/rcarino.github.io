@@ -1,1 +1,0 @@
-browserify javascripts/app/main.js | uglifyjs > javascripts/min/main.js
