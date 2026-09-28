@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Password generator (offline)</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231a1d21'/%3E%3Cpath d='M24 30 v-6 a8 8 0 0 1 16 0 v6' fill='none' stroke='%237cb342' stroke-width='7'/%3E%3Crect x='17' y='28' width='30' height='24' rx='6' fill='%237cb342'/%3E%3C/svg%3E">
+<style>
+  body { font-family: system-ui, sans-serif; max-width: 560px; margin: 3rem auto; padding: 0 1rem; }
+  #out { font-family: ui-monospace, monospace; font-size: 1.35rem; word-break: break-all;
+         background: #f4f4f4; padding: 1rem; border-radius: 8px; margin: 1rem 0; min-height: 1.5em; }
+  label { display: block; margin: .4rem 0; }
+  button { font-size: 1rem; padding: .5rem 1rem; margin-right: .5rem; cursor: pointer; }
+  .meta { color: #555; margin-top: .5rem; }
+  .note { color: #555; font-size: .9rem; }
+  #bar { height: 8px; background: #e0e0e0; border-radius: 4px; margin-top: .5rem; overflow: hidden; }
+  #barfill { height: 100%; width: 0; border-radius: 4px; }
+</style>
+</head>
+<body>
+<h2>Offline password generator</h2>
+<p class="note">Single file, no network, no ads, no extension, no account.
+Randomness comes from your OS via <code>crypto.getRandomValues()</code> with
+rejection sampling (no modulo bias). Ambiguous characters
+(<code>i l I L 1 o O 0</code>) are always excluded, and at most one symbol is
+included, drawn from a small keyboard-friendly set. Exactly one uppercase, one
+digit, and at most one symbol — one shift press and one trip to the symbol
+keyboard; everything else is lowercase. Read the source — it's short.</p>
+<label>Length: <input id="len" type="number" value="16" min="8" max="64"></label>
+<label><input type="checkbox" id="upper" checked> Uppercase</label>
+<label><input type="checkbox" id="lower" checked> Lowercase</label>
+<label><input type="checkbox" id="digits" checked> Digits</label>
+<label><input type="checkbox" id="symbols" checked> Symbols (max 1)</label>
+<p>
+  <button id="gen">Generate</button>
+  <button id="copy">Copy</button>
+</p>
+<div id="out"></div>
+<div class="meta" id="meta"></div>
+<div id="bar"><div id="barfill"></div></div>
+<script>
+const SETS = {
+  upper:   'ABCDEFGHJKMNPQRSTUVWXYZ',
+  lower:   'abcdefghjkmnpqrstuvwxyz',
+  digits:  '23456789',
+  symbols: '!@#$%^&*'
+};
+const WEIGHTS = { lower: 8, upper: 1, digits: 1 };
+function randInt(max) {
+  const range = 256 - (256 % max);
+  const b = new Uint8Array(1);
+  let r;
+  do { crypto.getRandomValues(b); r = b[0]; } while (r >= range);
+  return r % max;
+}
+function shuffle(a) {
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = randInt(i + 1);
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+function grade(bits) {
+  if (bits < 50)  return ['Weak', '#d32f2f'];
+  if (bits < 70)  return ['Decent', '#f9a825'];
+  if (bits < 90)  return ['Strong', '#7cb342'];
+  if (bits < 110) return ['Very strong', '#2e7d32'];
+  return ['Overkill', '#1565c0'];
+}
+function generate() {
+  const len = Math.min(64, Math.max(8, +document.getElementById('len').value || 16));
+  const useUpper = document.getElementById('upper').checked;
+  const useDigit = document.getElementById('digits').checked;
+  const useSymbol = document.getElementById('symbols').checked;
+  const active = ['upper', 'lower', 'digits'].filter(k => document.getElementById(k).checked);
+  if (!active.length) return;
+  const fillerKeys = active.filter(k => k !== 'upper');
+  const fkeys = fillerKeys.length ? fillerKeys : active;
+  const fpool = fkeys.map(k => SETS[k].repeat(WEIGHTS[k] || 1)).join('');
+  const arr = [];
+  if (useUpper) arr.push(SETS.upper[randInt(SETS.upper.length)]);
+  if (useDigit) arr.push(SETS.digits[randInt(SETS.digits.length)]);
+  while (arr.length < len - (useSymbol ? 1 : 0)) arr.push(fpool[randInt(fpool.length)]);
+  if (useSymbol) arr.push(SETS.symbols[randInt(SETS.symbols.length)]);
+  shuffle(arr);
+  const totalW = fkeys.reduce((s, k) => s + (WEIGHTS[k] || 1) * SETS[k].length, 0);
+  let H = 0;
+  for (const k of fkeys) {
+    const p = (WEIGHTS[k] || 1) / totalW;
+    H -= SETS[k].length * p * Math.log2(p);
+  }
+  const nFiller = arr.length - (useUpper ? 1 : 0) - (useDigit ? 1 : 0) - (useSymbol ? 1 : 0);
+  const bits = nFiller * H
+    + (useUpper ? Math.log2(SETS.upper.length) : 0)
+    + (useDigit ? Math.log2(SETS.digits.length) : 0)
+    + (useSymbol ? Math.log2(len) + Math.log2(SETS.symbols.length) : 0);
+  const [label, color] = grade(bits);
+  const pw = arr.join('');
+  document.getElementById('out').textContent = pw;
+  document.getElementById('meta').textContent = bits.toFixed(1) + ' bits of entropy — ' + label;
+  const fill = document.getElementById('barfill');
+  fill.style.width = Math.min(100, bits / 128 * 100).toFixed(1) + '%';
+  fill.style.background = color;
+}
+document.getElementById('gen').onclick = generate;
+document.getElementById('copy').onclick = () =>
+  navigator.clipboard.writeText(document.getElementById('out').textContent);
+generate();
+</script>
+</body>
+</html>
